@@ -1,7 +1,7 @@
 # htmlcharts
 Simple responsive HTML charts using HTML, CSS and JS
 
-1. Gender baised
+1. Gender based
 2. Correlation stacked bar
 3. Single Line
 4. Correlation circular

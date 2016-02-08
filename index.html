@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=medium-dpi" />
+        
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta charset="UTF-8">
+        <style type="text/css">
+            /* ------------------------------------------------------
+             *  CSS RESET v2.0 - ERIC MEYER                          |
+             * ------------------------------------------------------
+             */ 
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed, 
+            figure, figcaption, footer, header, hgroup, 
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure, 
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: '';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            html, body {
+                height: 100%;
+                width: 100%;
+            }
+
+            
+
+        </style>
+        <title>Charts</title>
+    </head>
+    <body>
+        
+        <!-- GENDER GRAPH Begins-->
+        <style type="text/css">
+            .haxis {
+                height: 20px;
+                border-bottom: 1px solid;
+            }
+            .haxis div {
+                width: 33.33%;
+                height: 20px;
+                float: left;
+            }
+            .inner-1 {
+                width: 47.5%;
+                min-height: 30px;
+                float: left;
+            }
+            #vaxis {
+                width: 5%;
+                min-height: 30px;
+                float: left;
+            }
+            .inner-2 {
+                width: 47.5%;
+                min-height: 30px;
+                float: left;
+            }
+            /*individal bar within inner-1 */
+             .left-side-bar {
+                margin-top: 10px;
+                height: 30px;
+                float: right;
+                clear: right;
+            }
+            /*individal bar within inner-2 */
+             .right-side-bar {
+                margin-top: 10px;
+                height: 30px;
+                float: left;
+                clear: left;
+            }
+            /*individual plot within vaxis*/
+             .mid-axis {
+                margin-top: 10px;
+                height: 30px;
+                text-align: center;
+            }
+        </style>
+        <p>Single - Gender Based: </p>
+        <br>
+        <div class="outer">
+            <div class="haxis">
+                <div style="text-align: left"><img style="width: 16px; height: 16px;" src="icons/gender_m_icon.png" /></div>
+                <div style="text-align: center">q1</div>
+                <div style="text-align: right"><img style="width: 16px; height: 16px;" src="icons/gender_f_icon.png" /></div>
+            </div>
+            <div id="left" class="inner-1"></div>           
+            <div id="vaxis"></div>          
+            <div id="right" class="inner-2"></div>
+            <div style="clear: both;"></div> 
+        </div>
+        <!-- Ends -->
+
+        <!-- Stacked  GRAPH Begins-->
+        <style type="text/css">
+            .left-correlation-bar {
+                height: 30px;
+                float: right;
+                clear: right;
+                margin-top: 10px;
+                margin-right: 0;
+            }
+            . .right-correlation-bar {
+                width: 100%;
+                height: 30px;
+                margin-top: 10px;
+            }
+            .inner-right-correlation-bar {
+                height: 30px;
+                float: left;
+            }
+        </style>
+        <br>
+        <p>Correlation - Stacked/bars</p>
+        <br>
+        <div class="outer">
+            <div class="haxis">
+                <div style="text-align: left">Q1 votes</div>
+                <div style="text-align: center"></div>
+                <div style="text-align: right">Q2%</div>
+            </div>
+            <div id="correlation-left" class="inner-1" style="width: 29.9%"></div>
+            <div id="vaxis" style="width: 0.2%"></div>
+            <div id="correlation-right" class="inner-2" style="width: 69.9%"></div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <!-- LINE GRAPH Begins -->
+        <br>
+        <p>Line: </p>
+        <br>
+        <canvas height="0" id="weekly_graph" width="0"></canvas>    
+        <!-- Ends -->
+
+        <!-- CONCURRANCE GRAPH Begins -->
+        <br>
+        <p>Correlation - Circular: </p>
+        <br>
+        <canvas height="0" id="blob_graph" width="0"></canvas> 
+        <!-- Ends -->
+
+        <!-- CONCURRANCE GRAPH Begins -->
+        <br>
+        <p>Correlation - Concurrence: </p>
+        <br>
+        <canvas height="0" id="concurrence_graph" width="0"></canvas> 
+        <!-- Ends -->
+
+        <script type="text/javascript" src="js/index.js"></script>      
+
+    </body>
+</html>
